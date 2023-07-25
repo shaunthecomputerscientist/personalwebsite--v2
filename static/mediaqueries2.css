@@ -1,0 +1,181 @@
+@media screen and (max-width: 450px) {
+  html{
+    background: url(/static/kiminonawa.jpg);
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: top;
+}
+    body {
+        background:url(/static/HD\ wallpaper_\ Your\ Name\ wallpaper\,\ Kimi\ no\ Na\ Wa\,\ Makoto\ Shinkai\ \,\ starry\ night.jpg);
+        background-repeat: no-repeat, no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0; /* Add this to remove default body margin */
+      }
+      
+      /* Apply responsive styles to the whole form container */
+      .container1 {
+        margin: 6% 5%; /* Adjust the left and right margins for better responsiveness */
+        height: auto; /* Change height to auto to allow flexible height */
+        padding: 1rem; /* Add some padding for better spacing */
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        border-radius: 2rem;
+        background: linear-gradient(to bottom right, rgba(236, 124, 171, 0.255), rgba(31, 195, 220, 0.137), transparent);
+      }
+      
+      /* Update label styles for better alignment */
+      .container1 label {
+        color: rgb(162, 210, 210);
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 0.5rem; /* Add a small margin below each label */
+      }
+      
+      /* Update input styles for better alignment and responsiveness */
+      .container1 input {
+        border-radius: 2rem;
+        width: 50%; /* Set inputs to occupy the full container width */
+        padding: 0.5rem; /* Add padding for better spacing */
+      }
+      
+      /* Add hover effect for all inputs */
+      .container1 input:hover {
+        background-color: white;
+        color: black;
+        transition: 2s ease-in-out;
+      }
+      
+      /* Make the submit button responsive */
+      .btn {
+        height: 3rem;
+        width: 100%; /* Set button to occupy the full container width */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: rgba(0, 255, 255, 0);
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 2rem;
+        margin-top: 1rem; /* Add margin to separate button from the form inputs */
+      }
+      .container1{
+        background:url(/static/kiminonawa.jpg);
+        background-size: contain;
+        background-position:top left;
+        background-repeat: repeat;
+    
+    }
+      .container1:hover{
+        background:url(/static/kiminonawa.jpg);
+        background-size: cover;
+        background-position:center;
+        background-repeat: repeat;
+        
+        transition: 5s ease-in;
+    
+    }
+
+      .container input:hover{
+        width: 19rem;
+        background-color: rgba(199, 145, 46, 0.258);
+        color: black;
+        transition: 2s ease-in-out;
+    }
+    .container input:hover{
+      width: 9rem;
+      background-color: rgba(46, 178, 199, 0.258);
+      color: black;
+      transition: 2s ease-in-out;
+  }
+}
+@media (min-width:451px) and (max-width:992px){
+  
+  body {
+    background: url(/static/HD\ wallpaper_\ Your\ Name\ wallpaper\,\ Kimi\ no\ Na\ Wa\,\ Makoto\ Shinkai\ \,\ starry\ night.jpg), url(/static/kiminonawa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:left;
+    margin: 0; /* Add this to remove default body margin */
+  }
+  
+  /* Apply responsive styles to the whole form container */
+  .container1 {
+    margin: 6% 5%; /* Adjust the left and right margins for better responsiveness */
+    height: auto; /* Change height to auto to allow flexible height */
+    padding: 1rem; /* Add some padding for better spacing */
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 2rem;
+    background: linear-gradient(to bottom right, rgba(236, 124, 171, 0.255), rgba(31, 195, 220, 0.137), transparent);
+  }
+  
+  /* Update label styles for better alignment */
+  .container1 label {
+    color: rgb(162, 210, 210);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0.5rem; /* Add a small margin below each label */
+  }
+  
+  /* Update input styles for better alignment and responsiveness */
+  .container1 input {
+    border-radius: 2rem;
+    width: 80%; /* Set inputs to occupy the full container width */
+    padding: 0.5rem; /* Add padding for better spacing */
+  }
+  
+  /* Add hover effect for all inputs */
+  .container1 input:hover {
+    background-color: white;
+    color: black;
+    transition: 2s ease-in-out;
+  }
+  .container1:hover{
+    background:url(/static/{your\ name}\ AMV\ [Video]\ _\ Anime\ scenery\,\ Cool\ anime\ backgrounds\,\ Anime\ scenery\ wallpaper.jpg) transparent;
+    background-size: cover;
+
+    background-position:center;
+    background-repeat: repeat;
+    
+    transition: 5s ease-in;
+
+}
+  
+  /* Make the submit button responsive */
+  .btn {
+    height: 3rem;
+    width: 100%; /* Set button to occupy the full container width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 255, 255, 0);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2rem;
+    margin-top: 1rem; /* Add margin to separate button from the form inputs */
+  }
+  .container1 input{
+    border-radius: 2rem;
+    width: 20rem;
+    background-color: transparent;
+    
+  }
+  .container input:hover{
+    width: 19rem;
+    background-color: rgba(46, 178, 199, 0.258);
+    color: black;
+    transition: 2s ease-in-out;
+  }
+  
+}

@@ -1,0 +1,2 @@
+[EMAIL]
+MAIL_PASSWORD=jmphkwqfsdhbqjzy

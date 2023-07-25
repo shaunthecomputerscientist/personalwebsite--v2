@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        /* Example CSS styles for the chatbot window */
+        html{
+            overflow-y: scroll;
+            background:black;
+        }
+        html::-webkit-scrollbar-track {
+    background-color: transparent; /* Set the track background color to transparent */
+        }
+        html::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2); /* Set the thumb background color to a transparent white */
+        }
+
+        body{
+            margin: 0;
+            
+        }
+        #user-input{
+            background-color: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.179);
+            border-radius: 5px;
+            padding: 2% 2%;
+            margin-left:2%;
+            
+        }
+        #btn{
+            border: 2px solid rgba(146, 146, 146, 0.255);
+            border-radius: 5px;
+            background-color: transparent;
+            color: rgb(127, 128, 128);
+        }
+
+        #chatbot-container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: auto;
+            
+            border: 1px solid #cccccc00;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0);
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        .chat-messages{
+            overflow-y: scroll;
+            overflow-y: hidden;
+            text-align: center;
+        }
+
+        .user {
+            text-align: left;
+            background-color: #6d733600;
+            color: #a4a4a3;
+            font-weight: 400;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .chatbot {
+            text-align: right;
+            background-color: #f5d71400;
+            color: #73fff8d7;
+            font-weight: 700;
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        /* Add more styles as needed */
+        /* .chatbot.typing::after {
+            content: "...";
+            color: black;
+            animation: typing 2s infinite;
+        }
+
+        @keyframes typing {
+            0%, 100% {
+                content: "";
+            }
+            
+            50% {
+                
+                content: "typing...";
+            }
+            
+        } */
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div id="chatbot-container">
+        <!-- Chatbot conversation will be displayed here -->
+        <div class="chat-messages chatbot typing" style="width: 100%; color: white;">
+            
+            
+        </div>
+        <input type="text" id="user-input" placeholder="Talk to my assistant...">
+        <button id="btn" onclick="sendMessage()">Chat:</button>
+    </div>
+</body>
+<script>
+      // Function to display messages in the chatbox
+    function addMessage(sender, message, typing) {
+        var chatMessages = document.getElementsByClassName("chat-messages")[0];
+        var messageDiv = document.createElement("div");
+
+        // Create an icon element for "chatbot" or "user"
+        var icon = document.createElement("i");
+        icon.className = sender === "chatbot" ? "fa-solid fa-robot fa-bounce" : "fa-regular fa-user"; // Use Font Awesome icon class names
+
+        // Append the icon and the message content to the message div
+        messageDiv.className = sender;
+        messageDiv.appendChild(icon);
+        messageDiv.appendChild(document.createTextNode("   "+message));
+        chatMessages.appendChild(messageDiv);
+
+        // Scroll to the bottom to show the latest messages
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        if (sender === "chatbot" && typing) {
+                messageDiv.classList.add("typing");
+            }
+        
+        // var chatbotContainer = document.getElementById("chatbot-container");
+        // chatbotContainer.style.height = chatMessages.offsetHeight + "px";
+    }
+
+
+     function sendMessage() {
+        var userInput = document.getElementById("user-input").value;
+        addMessage("user", userInput);
+
+        // Send user input to the server using AJAX
+        fetch('/chatbot', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: 'user_input=' + encodeURIComponent(userInput)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Simulate typing animation for the chatbot response
+            addMessage("chatbot", "typing...", true);
+
+            // Remove typing animation and display chatbot response
+            setTimeout(function () {
+                var chatMessages = document.getElementsByClassName("chat-messages")[0];
+                var typingDiv = chatMessages.querySelector(".chatbot.typing");
+                chatMessages.removeChild(typingDiv);
+
+                var chatbotResponse = data.response;
+                addMessage("chatbot", chatbotResponse);
+            }, 1000); // Change the delay as needed
+        })
+        .catch(error => console.error('Error:', error));
+
+        // Clear the input field after sending the message
+        document.getElementById("user-input").value = "";
+    }
+    
+    // function sendMessage() {
+    //     var userInput = document.getElementById("user-input").value;
+    //     addMessage("user", userInput);
+
+    //     if (isFirstRequest) {
+    //         addMessage("chatbot", "Generating...", true);
+    //     } else {
+    //         addMessage("chatbot", "typing...", true);
+    //     }
+
+    //     // Send user input to the server using AJAX
+    //     fetch('/chatbot', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/x-www-form-urlencoded',
+    //         },
+    //         body: 'user_input=' + encodeURIComponent(userInput)
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         // If it's the first request, remove the generating animation
+    //         if (isFirstRequest) {
+    //             var chatMessages = document.getElementsByClassName("chat-messages")[0];
+    //             var generatingDiv = chatMessages.querySelector(".chatbot.generating");
+    //             chatMessages.removeChild(generatingDiv);
+    //             isFirstRequest = false;
+    //         }
+
+    //         // Remove typing animation and display chatbot response
+    //         var chatbotResponse = data.response;
+    //         addMessage("chatbot", chatbotResponse);
+    //     })
+    //     .catch(error => console.error('Error:', error));
+
+    //     // Clear the input field after sending the message
+    //     document.getElementById("user-input").value = "";
+    // }
+</script>
+    
+</script>
+</html>

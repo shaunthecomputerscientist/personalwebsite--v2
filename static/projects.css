@@ -1,0 +1,153 @@
+.box0{
+    margin-left: 7rem;
+    
+}
+.box2{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 2px;
+    margin:56px 0;
+    gap: 5rem;
+    
+    
+}
+
+.projectsection{
+    text-align: center;
+    margin-top: 10rem;
+    color: rgb(91, 225, 201);
+}
+
+.box2 .vertical{
+    background: white;
+    height:93px;
+    width: 0.1rem;
+    margin: 0 85px;
+    
+    
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.examples-area{
+    width: 12%;
+    border: 2px solid black;
+    border-radius: 2rem;
+    position: relative;
+    min-height: 250px;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    
+}
+.p1text{
+    position: absolute;
+    color: white;
+    bottom: 20px;
+    left: 50px;
+}
+.p2text{
+    position: absolute;
+    font-size: 0.9rem;
+    color: white;
+    bottom: 30px;
+    left: 20px;
+}
+.p3text{
+    position: absolute;
+    font-size: 1rem;
+    color: white;
+    bottom: 30px;
+    left: 11px;
+}
+.area1{
+    background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.7)), url(neuralnetwork.jpg);
+    background-size: cover;
+    opacity: 0.7;
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    filter:brightness(1.2) hue-rotate(-20deg);
+    transition: 2s linear;
+}
+.area1:hover{
+    background-size: cover;
+    background-position-x: -4rem;
+    background-position-y: center;
+
+    opacity:0.9;
+    filter: brightness(1.7) hue-rotate(10deg);
+    transition: 2s ease-out;
+}
+.area2{
+    background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.7)), url(webops.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    filter: brightness(1) hue-rotate(-20deg);
+    transition: 1s linear;
+}
+.area2:hover{
+    filter: brightness(1.7) hue-rotate(20deg);
+    transition: 2s linear;
+}
+.area3{
+    background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.7)), url(dsproj.jpeg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    filter: hue-rotate(-20deg) brightness(1.1) contrast(1.1);
+    transition: 2s linear;
+}
+.area3:hover{
+    filter: hue-rotate(30deg) brightness(1.7) contrast(1);
+    transition: 5s ease-in-out;
+}
+.area4{
+    background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.7)), url(aiassistant.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    filter: hue-rotate(-3deg) brightness(0.9) contrast(1.1);
+    transition: 2s linear;
+
+
+}
+.area4:hover{
+    filter: hue-rotate(0) brightness(1.7) contrast(1);
+    transition: 3s ease-out;
+}
+.area5{
+    background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.7)), url(trialimg14.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    filter: hue-rotate(-30deg) brightness(1) contrast(1.1);
+    transition: 2s linear;
+}
+.area5:hover{
+    filter: hue-rotate(0) brightness(1.7) contrast(1);
+    transition: 3s ease-out;
+}
+.examples-area:hover{
+    background-color: rgba(255, 255, 255, 0.552);
+    transition: 1s;
+}
+.overlay{
+    display: none;
+}
+
+.common-property{
+    
+    background: transparent;
+}
+.common-property:hover{
+    color: rgb(182, 255, 255);
+    transition: 1s linear;
+}

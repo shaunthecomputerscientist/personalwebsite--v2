@@ -1,0 +1,80 @@
+
+body{
+    background: url(/static/HD\ wallpaper_\ Your\ Name\ wallpaper\,\ Kimi\ no\ Na\ Wa\,\ Makoto\ Shinkai\ \,\ starry\ night.jpg),url(/static/kiminonawa.jpg);
+    
+    background-repeat:repeat,no-repeat;
+    background-size: cover;
+    
+    background-position: bottom;
+    
+}
+body:hover{
+    background: url(/static/HD\ wallpaper_\ Your\ Name\ wallpaper\,\ Kimi\ no\ Na\ Wa\,\ Makoto\ Shinkai\ \,\ starry\ night.jpg), url(/static/kiminonawa.jpg);
+    background-repeat: repeat-y repeat-x;
+    background-size: cover;
+    background-position: top center;
+    transition: 5s ease-in-out;
+}
+.btn{
+    height: 3rem;
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: rgba(0, 255, 255, 0);
+    
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2rem;
+}
+.container1{
+    opacity: 0.01;
+    background:url();
+    margin: 6% 30%;
+    height: 70vh;
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 2rem;
+    background: linear-gradient(to bottom right, rgba(31, 195, 220, 0.137),transparent,rgba(236, 124, 171, 0.255));
+    transition: 2s linear;
+   
+    
+
+}
+.container1:hover{
+    background:url(/static/Hd\ anime\ kimi\ no\ na\ wa\ wallpaper.jpg);
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 4s ease-in;
+
+}
+.container1 label{
+    
+    
+    color: rgb(162, 210, 210);
+    font-weight: 800;
+}
+.container1 label:hover{
+    color: rgb(148, 148, 148);
+    font-weight: 800;
+}
+
+.container1 input{
+    border-radius: 2rem;
+    width: 20rem;
+    background-color: transparent;
+    
+}
+.container input:hover{
+    width: 19rem;
+    background-color: rgba(163, 181, 183, 0.245);
+    color: rgb(255, 247, 90);
+    transition: 2s ease-in-out;
+}

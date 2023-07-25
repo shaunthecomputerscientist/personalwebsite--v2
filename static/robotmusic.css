@@ -1,0 +1,110 @@
+.tothemoon{
+    position: relative;
+}
+#audioplayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    z-index: 2;
+    pointer-events: none;
+}
+#robot-image{
+    position: relative;
+}
+.play-icon{
+    font-size: 1rem;
+    position: absolute;
+    top:55%;
+    rotate: 55deg ;
+    
+    right:56%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    color: rgba(255, 255, 255, 0.432);
+}
+.play-icon{
+    display:none;
+}
+.pause-icon{
+    display:none;
+}
+.pause-icon.active{
+    
+    position: absolute;
+    font-size: 1rem;
+    bottom: 42%;
+    left: 44%;
+    display:block;
+    transform: translate(-50%,-50%);
+    
+    color: rgba(213, 161, 237, 0.337);
+    
+}
+
+.play-icon.active{
+    display:inline;
+    rotate: 0deg;
+    bottom: 40%;
+    left: 43%;
+    color: rgba(213, 161, 237, 0.337);
+}
+#track-buttons{
+    position:relative;
+    top: 4rem;
+    right: -11rem;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    cursor:grab;
+}
+
+.track-button{
+    width: 1rem;
+    height: 1rem;
+    font-size: 10;
+    border-radius: 80%;
+    color: rgb(0, 255, 255);
+    background: rgb(0, 255, 255);
+    transform: translate(8rem,-24rem)
+}
+
+
+.t1{
+    box-shadow: 0 0 3rem rgb(75, 242, 220);
+    filter: hue-rotate(-10deg);
+    transition: 1s linear;
+}
+.t1:hover{
+    filter: hue-rotate(90deg);
+    box-shadow: 0 0 0.2rem cyan;
+    transition: 1s linear;
+}
+.t2{
+    box-shadow: 0 0 3rem rgb(75, 242, 220);
+    filter: hue-rotate(-10deg);
+    transition: 1s linear;
+}
+.t2:hover{
+    filter: hue-rotate(-180deg);
+    box-shadow: 0 0 0.2rem cyan;
+    transition: 1s linear;
+
+}
+.t3{
+    
+    box-shadow: 0 0 3rem rgb(75, 242, 220);
+    filter: hue-rotate(-10deg);
+    transition: 1s linear;
+    
+}
+
+.t3:hover{
+    filter: hue-rotate(210deg);
+    box-shadow: 0 0 0.2rem cyan;
+    transition: 1s linear;
+}
